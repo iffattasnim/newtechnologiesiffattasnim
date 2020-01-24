@@ -1,11 +1,18 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            <script src="./js/vue.js"></script>
-            <h1>VueJS</h1>
-        </title>
-    </head>
-    <body>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<body>
 
-    </body>
+<div id="app">
+  <h1>{{ message }}</h1>
+</div>
+
+<script>
+var myObject = new Vue({
+  el: '#app',
+  data: {message: 'First Test'}
+})
+</script>
+
+</body>
 </html>
