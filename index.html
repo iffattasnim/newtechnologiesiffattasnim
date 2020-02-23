@@ -1,18 +1,106 @@
 <!DOCTYPE html>
 <html>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Online App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
+  
 
-<div id="app">
-  <h1>{{ message }}</h1>
+<div class="header"><h1>Jute Products</h1></div>  
+<div class="nav-bar">
+  <div>
+    <b-navbar type="dark" variant="dark">
+      <b-navbar-nav>
+        <b-nav-item href="#">Home</b-nav-item>
+        <b-nav-item href="#">Gallery</b-nav-item>
+        <b-nav-item href="#">Contact Us</b-nav-item>
+  
+    
+  
+        <b-nav-item-dropdown text="User" right>
+          <b-dropdown-item href="#">Account</b-dropdown-item>
+          <b-dropdown-item href="#">Settings</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+    </b-navbar>
+  </div>
 </div>
+  <div id="app">
 
-<script>
-var myObject = new Vue({
-  el: '#app',
-  data: {message: 'First Test'}
-})
-</script>
+    
+        <div class="product-image">
+          <img v-bind:src="image1">
+        </div>
+      
+        <div class="product-info1">
+              <h1> {{ brand }} {{ product1 }}</h1>
+              <p>{{ description1 }} 
+                <ul>
+                  <li v-for="detail in details">{{ detail }}</li>
+                </ul>
+              </p>
+
+            
+              <p v-if="inStock" style="color: forestgreen;">In Stock</p>
+              <p v-else style="color: red;">Out of Stock</p> 
+        </div>
+
+        <div class="product-image">
+          <img v-bind:src="image2">
+        </div>
+      
+        <div class="product-info2">
+              <h1>{{ brand }}  {{ product2 }}</h1>
+              <p>{{ description2 }} 
+                <ul>
+                  <li v-for="detail in details">{{ detail }}</li>
+                </ul>
+              </p>
+              <p v-if="inStock" style="color: forestgreen;">In Stock</p>
+              <p v-else style="color: red;">Out of Stock</p>
+
+             
+          
+        </div>
+        
+        <div class="product-image">
+          <img v-bind:src="image3">
+        </div>
+      
+        <div class="product-info3">
+              <h1>{{ brand }} {{ product3 }}</h1>
+              <p>{{ description3 }} 
+                <ul>
+                  <li v-for="detail in details">{{ detail }}</li>
+                </ul>
+              </p>
+              <p v-if="inStock" style="color: forestgreen;">In Stock</p>
+              <p v-else style="color: red;">Out of Stock</p></div>
+        </div> 
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+   <script src="main.js"></script>
+   <script>
+    import { mdbDropdown, mdbDropdownToggle, mdbDropdownMenu, mdbDropdownItem, mdbContainer, mdbNavbar, mdbNavbarBrand, mdbNavbarToggler, mdbNavbarNav, mdbNavItem } from 'mdbvue';
+    export default {
+      name: 'HelloWorld',
+      components: {
+        mdbNavbar,
+        mdbNavbarBrand,
+        mdbNavbarToggler,
+        mdbNavbarNav,
+        mdbNavItem,
+        mdbContainer,
+        mdbDropdown,
+        mdbDropdownToggle,
+        mdbDropdownMenu,
+        mdbDropdownItem
+      }
+    }
+  </script>
 
 </body>
 </html>
