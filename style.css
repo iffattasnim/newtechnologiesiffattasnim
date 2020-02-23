@@ -4,17 +4,18 @@ body {
   color:#282828;
   margin: 0px;
 }
+
 .header {
   padding: 10px;
   text-align: center;
-  background:rgba(4, 138, 60, 0.788);
+  background: linear-gradient(-90deg, rgb(122, 228, 87), rgb(80, 209, 129));
   color: white;
 }
 .nav-bar {
-  background: linear-gradient(-90deg, rgb(122, 228, 87), rgb(12, 155, 141));
-  text-align: right;
-  height: 60px;
-  margin-bottom: 15px;
+  background: linear-gradient(-90deg, rgb(231, 230, 227), rgb(247, 252, 249));
+  text-align: center;
+  height: 55px;
+  margin-bottom: 10px;
 }
 
 
@@ -42,6 +43,7 @@ img {
 .product-info1 {
   float:left;  
   padding-top: 10px;
+  padding-bottom: 20px;
   width:50%; 
   height:280px;
 }
@@ -56,6 +58,7 @@ img {
 .product-info3 {
   float:left;  
   padding-top: 10px;
+  margin-bottom: 120px;
   width:50%; 
   height:280px;
 }
@@ -113,4 +116,14 @@ textarea {
 .activeTab {
   color: #16C0B0;
   text-decoration: underline;
+}
+.footer {
+  background: linear-gradient(-90deg, rgb(122, 228, 87), rgb(12, 155, 141));
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:50px;
+  width:100%;
+   color: white;
+   text-align: center;
 }

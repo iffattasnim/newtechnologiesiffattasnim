@@ -8,28 +8,13 @@
 <body>
   
 
-<div class="header"><h1>Jute Products</h1></div>  
+<div class="header">
+  <h1>Jute Products</h1></div>  
 <div class="nav-bar">
-  <div>
-    <b-navbar type="dark" variant="dark">
-      <b-navbar-nav>
-        <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#">Gallery</b-nav-item>
-        <b-nav-item href="#">Contact Us</b-nav-item>
-  
-    
-  
-        <b-nav-item-dropdown text="User" right>
-          <b-dropdown-item href="#">Account</b-dropdown-item>
-          <b-dropdown-item href="#">Settings</b-dropdown-item>
-        </b-nav-item-dropdown>
-      </b-navbar-nav>
-    </b-navbar>
-  </div>
+  <P>THIS APPLICATION IS A PROJECT USING VUE JAVASCRIPT LIBRARY</P>
+  <p>Some products made by Jute are presented below. This website is basically made to know how versatile Jute is</p>
 </div>
-  <div id="app">
-
-    
+<div id="app">
         <div class="product-image">
           <img v-bind:src="image1">
         </div>
@@ -37,14 +22,15 @@
         <div class="product-info1">
               <h1> {{ brand }} {{ product1 }}</h1>
               <p>{{ description1 }} 
-                <ul>
+                <ul></ul>
                   <li v-for="detail in details">{{ detail }}</li>
                 </ul>
               </p>
 
             
-              <p v-if="inStock" style="color: forestgreen;">In Stock</p>
-              <p v-else style="color: red;">Out of Stock</p> 
+              <p v-if="inStock1" style="color: forestgreen;">In Stock</p>
+              <p v-else style="color: red;">Out of Stock</p>
+              <span v-if="onSale1" style= "color: turquoise;">Sale!</span> 
         </div>
 
         <div class="product-image">
@@ -58,16 +44,14 @@
                   <li v-for="detail in details">{{ detail }}</li>
                 </ul>
               </p>
-              <p v-if="inStock" style="color: forestgreen;">In Stock</p>
+              <p v-if="inStock2" style="color: forestgreen;">In Stock</p>
               <p v-else style="color: red;">Out of Stock</p>
+              <span v-if="onSale2" style= "color: turquoise;">Sale!</span>
+        </div>
 
-             
-          
-        </div>
-        
-        <div class="product-image">
-          <img v-bind:src="image3">
-        </div>
+          <div class="product-image">
+            <img v-bind:src="image3">
+          </div>
       
         <div class="product-info3">
               <h1>{{ brand }} {{ product3 }}</h1>
@@ -76,31 +60,20 @@
                   <li v-for="detail in details">{{ detail }}</li>
                 </ul>
               </p>
-              <p v-if="inStock" style="color: forestgreen;">In Stock</p>
-              <p v-else style="color: red;">Out of Stock</p></div>
-        </div> 
+              <p v-if="inStock3" style="color: forestgreen;">In Stock</p>
+              <p v-else style="color: red;">Out of Stock</p>
+              <span v-if="onSale3" style= "color: turquoise;">Sale!</span>
+        </div>
+</div> 
+
+<div class="footer">
+  <h5>CREATED BY STUDENT OF OAMK 02/2020</h5>
+</div>
   
   
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
    <script src="main.js"></script>
-   <script>
-    import { mdbDropdown, mdbDropdownToggle, mdbDropdownMenu, mdbDropdownItem, mdbContainer, mdbNavbar, mdbNavbarBrand, mdbNavbarToggler, mdbNavbarNav, mdbNavItem } from 'mdbvue';
-    export default {
-      name: 'HelloWorld',
-      components: {
-        mdbNavbar,
-        mdbNavbarBrand,
-        mdbNavbarToggler,
-        mdbNavbarNav,
-        mdbNavItem,
-        mdbContainer,
-        mdbDropdown,
-        mdbDropdownToggle,
-        mdbDropdownMenu,
-        mdbDropdownItem
-      }
-    }
-  </script>
+   
 
 </body>
 </html>
